@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDB Resale Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="hdb.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🏠 HDB Resale Explorer</h1>
+    <p>Explore past HDB resale prices and nearby amenities</p>
+  </header>
+
+  <!-- Search Input -->
+  <section>
+    <input type="text" id="searchInput" placeholder="Enter postal code or street name..." />
+    <button id="searchBtn">Search</button>
+    <div id="searchStatus"></div>
+  </section>
+
+  <!-- Map and Info -->
+  <section id="results">
+    <div id="mapContainer"></div>
+    <div id="propertyDetails"></div>
+    <div id="amenitiesList"></div>
+    <div id="transportAccess"></div>
+  </section>
+
+  <!-- Transaction Chart -->
+  <section>
+    <canvas id="transactionChart"></canvas>
+  </section>
+
+  <!-- Transaction Table -->
+  <section>
+    <table id="transactionTable">
+      <thead>
+        <tr>
+          <th>Date</th><th>Type</th><th>Model</th><th>Floor</th><th>Size (sqm)</th><th>Price (S$)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Built with 🧠 and ❤️ in Singapore. Data from <a href="https://data.gov.sg" target="_blank">data.gov.sg</a> & <a href="https://onemap.gov.sg" target="_blank">OneMap</a>.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
